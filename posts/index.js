@@ -26,7 +26,7 @@ app.post('/posts', async (req, res) => {
 
  posts[id]={id, title}
 
- await axios.post('http://localhost:4005/events', {
+ await axios.post('http://event-srv:4005/events', {
     type: 'PostCreated', 
 
     data: {
@@ -39,5 +39,5 @@ app.post('/posts', async (req, res) => {
 
 
 app.listen(4000, ()=>{
-    console.log('posts-ms : Listening on 4000 haha');
+    console.log('posts-ms : Listening on 4000 haha v2');
 })

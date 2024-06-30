@@ -14,10 +14,10 @@ app.post('/events', (req, res) => { //this receives an event from other microser
     events.push(event) //pushing the event received into array for later use
     
 
-    axios.post('http://localhost:4000/events', event).catch((err) => {
+    axios.post('http://poost-srv:4000/events', event).catch((err) => {
         console.log(err.message);
       });
-      axios.post('http://localhost:4001/events', event).catch((err) => {
+  /*    axios.post('http://localhost:4001/events', event).catch((err) => {
         console.log(err.message);
       });
       axios.post('http://localhost:4002/events', event).catch((err) => {
@@ -25,7 +25,7 @@ app.post('/events', (req, res) => { //this receives an event from other microser
       });
       axios.post('http://localhost:4003/events', event).catch((err) => {
         console.log(err.message);
-      });
+      });*/
 
     res.send({status: 'OK'})
 
