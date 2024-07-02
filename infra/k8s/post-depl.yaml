@@ -20,10 +20,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: poost-srv
+  name: poost-clusterip
 spec:
   selector:
-    app: poost-srv
+    app: posts
   ports:
     - name: poost
       protocol: TCP
